@@ -116,3 +116,35 @@ for i in range(len(outTeCol)):
     sns.countplot(test[outTeCol[i]])
 plt.show()
 
+train["X_770"].value_counts()
+test["X_1811"].value_counts()
+
+# nul
+df = train.copy()
+df.columns
+
+# -1는 null을 의미함
+df = df.fillna(-1)
+for d in df:
+    print(d)
+    break
+
+df.isnull() == False
+
+# 지금 볼 것은 y값에 따른 null의 유무 
+hue : y
+
+
+sns.countplot(data = df, hue = "Y_Class", x = "X_1")
+
+
+
+
+
+
+
+
+
+
+
+
